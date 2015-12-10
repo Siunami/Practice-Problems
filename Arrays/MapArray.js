@@ -7,9 +7,19 @@ var SoccerTeam = [
   {name: 'Jack', fitness: 72}
 ]
 
-var Fitness = SoccerTeam.map(function(x){
+var sum = 0;
+
+var fitness = SoccerTeam.map(function(x){
   var fitness = x.fitness;
   return fitness;
 });
 
-console.log(Fitness);
+console.log(fitness);
+
+for( var i = 0; i < fitness.length; i++ ){
+    sum += parseInt(fitness[i], 10 );
+}
+var average = sum/fitness.length;
+console.log(average);
+
+console.log("You're teams average fitness level is " + average + ".");
